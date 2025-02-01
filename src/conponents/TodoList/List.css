@@ -1,0 +1,158 @@
+/* ✅ СПИСОК ЗАДАЧ */
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 🔥 ОДНА ЗАДАЧА */
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 22px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.todo-item:hover {
+    transform: scale(1.05);
+    background: #444;
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
+    opacity: 0.9;
+    background: #33442e;
+}
+
+.todo-item:hover.completed {
+    transform: scale(1.05);
+    background: #336b1e;
+}
+
+/* ❌ КНОПКА УДАЛЕНИЯ */
+.todo-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #ff4444;
+    transition: 0.3s;
+}
+
+.todo-item button:hover {
+    color: #dd3333;
+}
+
+/* 📌 Стили для кнопок редактирования */
+.todo-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.todo-item button:hover {
+    transform: scale(1.1);
+}
+
+/* 💾 Стили для кнопки "Сохранить" */
+.todo-item button:nth-child(1) { /* 💾 */
+    color: #ffbd33;
+}
+
+.todo-item button:nth-child(1):hover {
+    color: #ff9130;
+}
+
+/* ✏ Стили для кнопки "Редактировать" */
+.todo-item button:nth-child(2) { /* ✏ */
+    color: #3498db;
+}
+
+.todo-item button:nth-child(2):hover {
+    color: #2980b9;
+}
+
+/* 🗑 Стили для кнопки удаления */
+.todo-item button:nth-child(3) { /* 🗑 */
+    color: #ff4444;
+}
+
+.todo-item button:nth-child(3):hover {
+    color: #dd3333;
+}
+
+/* 📝 Пустой список */
+.noList {
+    font-size: 24px;
+    color: #ff9130;
+    text-align: center;
+    font-weight: bold;
+    padding: 18px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #202020, #333);
+    box-shadow: 0 0 15px rgba(255, 145, 48, 0.6), inset 0 0 10px rgba(255, 145, 48, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    animation: glow 1.5s infinite alternate, fadeIn 0.6s ease-in-out;
+}
+
+/* 🔥 Эффект неонового свечения */
+.noList::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 14px;
+    background: linear-gradient(45deg, rgba(255, 145, 48, 0.8), rgba(255, 189, 51, 0.8));
+    filter: blur(12px);
+    opacity: 0.7;
+    z-index: -1;
+    animation: neonFlicker 1.8s infinite alternate;
+}
+
+/* ⚡ Пульсация свечения */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(255, 145, 48, 0.6), inset 0 0 8px rgba(255, 145, 48, 0.3);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 189, 51, 0.9), inset 0 0 12px rgba(255, 189, 51, 0.5);
+    }
+}
+
+/* 🎇 Лёгкое мерцание */
+@keyframes neonFlicker {
+    0% { opacity: 0.6; filter: blur(10px); }
+    50% { opacity: 0.8; filter: blur(12px); }
+    100% { opacity: 0.4; filter: blur(14px); }
+}
+
+/* 🌟 Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

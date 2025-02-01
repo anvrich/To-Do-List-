@@ -1,0 +1,46 @@
+/* 📝 Контейнер ввода */
+.todo-input {
+    display: flex;
+    flex-direction: column; /* Столбец */
+    gap: 10px; /* Отступы между полями */
+    align-items: stretch; /* Растягиваем по ширине */
+}
+
+/* Общие стили для всех инпутов */
+.input-field {
+    flex: 1;
+    padding: 28px;
+    font-size: 22px;
+    border-radius: 50px;
+    outline: none;
+    background: #fff;
+    border: 2px solid #ff5733;
+    color: #222;
+    font-family: inherit;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.input-field:focus {
+    transform: scale(1.05);
+    border: 2px solid #ff5733;
+    box-shadow: 0 0 10px rgba(255, 87, 51, 0.6);
+}
+
+/* 📝 Стили кнопки "Добавить задачу" */
+.input-button {
+    padding: 18px 30px;
+    font-size: 22px;
+    background: linear-gradient(90deg, #ff5733, #ffbd33);
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-button:hover {
+    background: linear-gradient(90deg, #ffbd33, #ff5733);
+    transform: scale(1.05);
+}

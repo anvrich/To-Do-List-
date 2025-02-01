@@ -1,0 +1,201 @@
+/* 🎯 ПАНЕЛЬ ДЕТАЛЕЙ ЗАДАЧИ */
+.task-details {
+    width: 40%;
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Если деталей нет – скрываем */
+.task-details.hidden {
+    display: none;
+}
+
+.task-details h3 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ffbd33;
+}
+
+.task-details p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.task-details .close-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.task-details .close-btn:hover {
+    background: #dd3333;
+    transform: scale(1.15);
+}
+
+
+
+/*
+sub
+*/
+
+
+
+/* 🔹 Контейнер подзадач */
+.subtask-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.subtask-input input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #ffbd33;
+    background: #2a2a2a;
+    color: white;
+    outline: none;
+}
+
+.subtask-input button {
+    padding: 10px;
+    font-size: 18px;
+    background: linear-gradient(90deg, #ff5733, #ffbd33);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subtask-input button:hover {
+    background: linear-gradient(90deg, #ffbd33, #ff5733);
+    transform: scale(1.05);
+}
+
+/* 🔹 Список подзадач */
+.subtask-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.subtask-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #333;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.subtask-item.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.subtask-item input {
+    transform: scale(1.2);
+}
+
+.subtask-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ff4444;
+    transition: 0.3s;
+}
+
+.subtask-item button:hover {
+    color: #dd3333;
+}
+
+
+
+/* 🔹 Кастомный чекбокс */
+.subtask-checkbox {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #ffbd33;
+    border-radius: 6px;
+    background: #2a2a2a;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.subtask-checkbox::before {
+    content: "✔";
+    font-size: 16px;
+    color: white;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.subtask-checkbox:checked {
+    background: #ffbd33;
+    border-color: #ffbd33;
+}
+
+.subtask-checkbox:checked::before {
+    display: block;
+}
+
+/* 🔹 Контейнер подзадач */
+.subtask-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.subtask-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #333;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.subtask-item.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.subtask-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ff4444;
+    transition: 0.3s;
+}
+
+.subtask-item button:hover {
+    color: #dd3333;
+}

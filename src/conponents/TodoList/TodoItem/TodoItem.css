@@ -1,0 +1,89 @@
+/* 🔥 ОДНА ЗАДАЧА */
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 22px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.todo-item:hover {
+    transform: scale(1.05);
+    background: #444;
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
+    opacity: 0.9;
+    background: #33442e;
+}
+
+.todo-item:hover.completed {
+    transform: scale(1.05);
+    background: #336b1e;
+}
+
+/* 🎨 СТИЛИ ДЛЯ РЕДАКТИРОВАНИЯ ЗАДАЧ */
+.todo-item input {
+    font-size: 22px;
+    padding: 12px;
+    width: 70%;
+    border: 2px solid #ffbd33;
+    border-radius: 8px;
+    background: #2a2a2a;
+    color: white;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s;
+}
+
+.todo-item input:focus {
+    border-color: #ff5733;
+    box-shadow: 0 0 8px rgba(255, 87, 51, 0.6);
+}
+
+/* 📌 Стили для кнопок редактирования */
+.todo-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.todo-item button:hover {
+    transform: scale(1.1);
+}
+
+/* 💾 Стили для кнопки "Сохранить" */
+.todo-item button:nth-child(1) { /* 💾 */
+    color: #ffbd33;
+}
+
+.todo-item button:nth-child(1):hover {
+    color: #ff9130;
+}
+
+/* ✏ Стили для кнопки "Редактировать" */
+.todo-item button:nth-child(2) { /* ✏ */
+    color: #3498db;
+}
+
+.todo-item button:nth-child(2):hover {
+    color: #2980b9;
+}
+
+/* 🗑 Стили для кнопки удаления */
+.todo-item button:nth-child(3) { /* 🗑 */
+    color: #ff4444;
+}
+
+.todo-item button:nth-child(3):hover {
+    color: #dd3333;
+}

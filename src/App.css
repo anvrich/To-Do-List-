@@ -1,0 +1,127 @@
+/* 🌟 ОБЩИЕ СТИЛИ 🌟 */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e1e1e, #1e1e1e);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+    padding: 40px;
+    overflow: hidden;
+    margin-left: -10%;
+}
+
+/* 🔥 ОСНОВНОЙ КОНТЕЙНЕР */
+.todo-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+    width: 110%;
+    max-width: 2000px;
+    box-shadow: 0 15px 40px rgb(255, 87, 51);
+    border-radius: 20px;
+    background: #222;
+    padding: 40px;
+    gap: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🎯 ЛЕВАЯ ПАНЕЛЬ */
+.todo-left {
+    width: 40%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(145deg, #292929, #3b3b3b);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 100px rgba(0, 0, 0, 0.5);
+}
+
+/* 📌 ЗАГОЛОВОК */
+h2.todo-title {
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2.todo-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    transform: translateX(-50%);
+    width: 350px;
+    height: 10px;
+    background: linear-gradient(90deg, #ff5733, #ffbd33);
+    border-radius: 10px;
+}
+
+/* 📝 ВВОД НОВОЙ ЗАДАЧИ */
+.todo-input {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+
+/* 🎭 ФИЛЬТРЫ */
+.filter-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.filter-btn {
+    flex: 1;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #333;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background: linear-gradient(90deg, #ff5733, #ffbd33);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* 🗑 УДАЛЕНИЕ ВСЕХ ЗАДАЧ */
+.delete-all-btn {
+    margin-top: 90px;
+    padding: 18px;
+    font-size: 22px;
+    background: #ff4444;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.delete-all-btn:hover {
+    background: #dd3333;
+    transform: scale(1.05);
+}
+
+.todo-right{
+    width: 70%;
+}
+
+
+
