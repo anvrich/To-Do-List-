@@ -14,3 +14,6 @@
 
 
 ➡ Ссылка на проект: http://143.198.169.81/
+
+<img src="src/img/2.png" width="500">
+<img src="src/img/1.png" width="400">
